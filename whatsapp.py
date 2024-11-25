@@ -10,6 +10,7 @@ msgs = [""] # list where function will be added
 def input_msg():
     choice = 'y'
     while choice != 'n':
+        print("If you want to close the program press CTRL+C")
         msg = input("Enter message you want to send in Loop ")
         msgs.append(msg)
 
@@ -24,6 +25,7 @@ def send_msg():
         pywhatkit.sendwhatmsg(number, msg, hour,0)
         hour += 1
         os.system("clear")
+        print("If you want to close the program press CTRL+C")
         if hour == 24:
             hour = 0
         time.sleep(3590) # Program will sleep for 3590 seconds and then start again

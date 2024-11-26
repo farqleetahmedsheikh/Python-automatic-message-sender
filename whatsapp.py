@@ -17,7 +17,7 @@ def input_msg():
         choice = input("Do you want to add another msg (y/n)").lower()
         os.system("clear")
 
-hour = time.localtime().tm_hour
+hour = time.localtime().tm_hour + 1
 
 # Getting user local time
 currentTime = f"Current time is {time.localtime().tm_hour} : {time.localtime().tm_min}"
@@ -39,7 +39,7 @@ print(f"Your {msgs} messages will start transfer from {hour} : 00 to {number} Nu
 while True:
     num = random.randint(2,len(msgs)-1)
     msg = msgs[num]
-    pywhatkit.sendwhatmsg(number, msg, hour,58)
+    pywhatkit.sendwhatmsg(number, msg, hour,00)
     hour += 1
     os.system("clear")
     print("If you want to close the program press CTRL+C")
